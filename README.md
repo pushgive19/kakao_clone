@@ -1,2 +1,4 @@
 # kakao_clone
- lecture
+
+lecture
+kakao desktop app lecture
