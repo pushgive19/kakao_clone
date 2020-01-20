@@ -1,0 +1,13 @@
+html - hyper_text_markup_language. 
+은 마크업(책에 밑줄긋는 느낌), 강조해주는? 이 장소에는 이미지, 글이 들어갈거야
+>> tag로 이루어져 있어 <name attribute="value">content</name>
+이게 tag야
+
+css - cascading_style_sheets
+는 글씨가 빨간색이다. 파란색이다. 크기가 어떻ㄱ다.
+배경이 어떻다
+ 말해주는거 디자인 적인 요소.
+ 
+ html - this is that his is that
+ css - this color is that
+ 둘다 프로그래밍 언어가 아니댜
