@@ -1,0 +1,26 @@
+/* css는 selector와 property로 구성
+ */
+
+property-name: value;
+/* 이게property
+ */
+
+h1 {
+  /* h1도 되고 링크, 푸터, 해더, div, a, header, footer, span 전부다 올 수 있어 */
+  property-name: value;
+  property-name: value;
+  property-name: value;
+  property-name: value;
+  property-name: value;
+}
+/* 이게 selector 원하는 만큼 property올 수 있어 */
+
+/* id와 - # /  class - . 입력할 때 selector (id, class, tag-name)순으로 온다 */
+h1 (#id, .class) {
+  /* h1도 되고 링크, 푸터, 해더 전부다 올 수 있어 */
+  property-name: value;
+  property-name: value;
+  property-name: value;
+  property-name: value;
+  property-name: value;
+}

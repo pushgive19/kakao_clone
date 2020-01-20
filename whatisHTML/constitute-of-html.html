@@ -2,6 +2,8 @@
 <!-- >> this is thml document  -->
 
 <html>
+  <!-- >>head is invinsible //but// body is visible -->
+
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="nomad coder" />
@@ -17,12 +19,41 @@
     <header>This is an important header</header>
     <article>This is an important header</article>
     <!-- semantic-tag >는 제목, 문단, 네비게이션, 같은 뭔가 뜻이 있는 태그 -->
-
+    <a href="https://www.w3schools.com/html/html5_semantic_elements.asp"
+      >about semantic-tag</a
+    >
     <!-- 아래의 non-semantic-tag는 의미없는 text들  -->
     <div>Whatever</div>
     <!-- div는 잡동사니 -->
     <span>something else</span>
     <!-- span 은 title, paragraph아니고 텍스트 넣는 상자. -->
+
+    <section>
+      <header>
+        <h1>Title of a section</h1>
+      </header>
+    </section>
+    <!-- 위의 header랑 아래 header랑 구분해줘야 되. 나중에 css에서 사용할 때 구분하기위해-->
+    <div>
+      <header>Title of the unkown container</header>
+    </div>
+
+    <!-- >> 그래서 id와 class 사용
+id는 고유번호 주민번호 / class 는 반복가능, 김민준처럼\ 아래 참고-->
+    <section>
+      <header id="headerNumberOne" class="defaultHeader">
+        <h1>Title of a section</h1>
+      </header>
+    </section>
+
+    <div>
+      <header id="differentHeader" class="defaultHeader">
+        Title of the unkown container
+      </header>
+    </div>
+    <!-- >> class는 = defaultHeader는 파란 배경 위 아래 동일
+    id는 하나는 사이즈 크고 하나는 사이즈 작고 이런개념
+    class는 반복해서 사용가능, 동일한 속서잉 있을 때마다 계속 사용. -->
 
     <h2>섹시민준</h2>
     <h3>섹시민준</h3>

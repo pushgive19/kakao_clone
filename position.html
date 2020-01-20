@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Position</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /* margin, padding 0은 브라우저기본 값 상쇄할려고 */
+      }
+      body {
+        height: 400%;
+        background-color: indigo;
+      }
+      /* Position fixed
+      
+      #boxOne {
+        height: 300px;
+        width: 300px;
+        background-color: ivory;
+        position: static;
+  
+      }
+
+      #boxTwo {
+        height: 300px;
+        width: 50%;
+        background-color: green;
+        position: fixed;
+        top: 50%;
+
+        right: 0px;
+      } */
+
+      .abs-box {
+        width: 400px;
+        height: 400px;
+        background-color: lightcoral;
+        position: relative;
+      }
+      .abs-child {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    </style>
+    <body>
+      <div class="abs-box">
+        <div class="abs-child"></div>
+      </div>
+      <!-- static is default / fixed is overlap / absolute related with relative/ without relative absolute is going to flee -->
+
+      <!-- Position fixed
+
+        <div id="boxOne">
+        <div class="box-child"></div>
+      </div>
+      <div id="boxTwo">
+        <div class="box-child"></div>
+      </div> -->
+    </body>
+  </head>
+</html>

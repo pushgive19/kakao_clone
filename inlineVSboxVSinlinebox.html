@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inline Example</title>
+    <style>
+      .box {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        display: inline-block;
+      }
+      /* inline은 block이 아닌 텍스트로 적용 2px만 차지한다는 의미
+      width와 height가 없는 block형태 (옆으로 붙는 형태) */
+      /* block는 옆에 붙어있는 박스가 없을때
+      inline-block는 가로로 붙어 있을때 */
+    </style>
+
+    <body>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </body>
+  </head>
+</html>
