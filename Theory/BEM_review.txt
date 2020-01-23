@@ -1,0 +1,29 @@
+bem is 
+block(html기본 구성은 block고 했다. ) 
+/ element(요소, block안의 구성요소로 생각해도 되고, ) 
+/ modifier(한정사? 의미짓는, 한정해주는, 정해주는 역할) >>외형 변화
+
+box는 arbitrary placement 임의적으로 위치가능, 어디에나 위치시킬 수 있따.
+re use 재사용 가능하다.
+한개 더있는데 까먹 >> nested structure 정리되는 구조? 끼어넣을 수 있는 구조? 정도 로 생각하자(틀릴 수 있음)
+
+element는 재사용 불가 block안에 들어가 있기 때문에 꺼내서 쓰기 힘들다
+
+modifier는 색상, 크기 지정해 주는것
+
+DOM > document Object Model
+The DOM represents a document with a logical tree.
+dom tree라고도 한다. html구조처럼 <html> <head> <body> 이런 node들로 구성된다. 
+
+// emdia-query 복습
+media는 모바일과 웹의 환경 차이를 쓸때 주로 사용한다.
+<style>
+    body{
+        background-color: red;
+    }
+    @media screen and (min-width: 320px) and (max-width: 640px){
+        body{
+            background-color: green ; 식으로 사용한다.
+        }
+    }
+</style>
