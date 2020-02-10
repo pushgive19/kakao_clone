@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
+    <script
+      src="https://kit.fontawesome.com/2c6cfb22b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
-    />
-    <title>Find | Kakao Clone</title>
+    /> -->
+    <title>Friend | Kakao Clone</title>
   </head>
   <body>
     <div class="status-bar">
@@ -26,82 +30,69 @@
     </div>
     <header class="header">
       <div class="header__header-column">
-        <h1 class="header__title">Find</h1>
+        <h1 class="header__title">Friends</h1>
       </div>
       <div class="header__header-column">
         <span class="header__icon">
           <i class="fas fa-search"></i>
         </span>
+
         <span class="header__icon">
           <i class="fas fa-cog"></i>
         </span>
       </div>
     </header>
-    <main class="find">
-      <header class="find__header">
-        <!-- 
-        <li class="find__icons">
-          <div class="qrcode">
-            <i class="fas fa-qrcode fa-2x"></i>
-            <div>
-              QR Code
+    <main class="friends">
+      <header class="friends__header">
+        <div class="friends__friend frined friend--lg">
+          <div class="friend__column">
+            <img src="images/minjoon.jpg" class="g-avatar friend__avatar" />
+
+            <div class="friend__content">
+              <span class="friend__name">
+                Min joon
+              </span>
+              <span class="friend__status">
+                I'm so happy
+              </span>
             </div>
           </div>
-        </li> 
-내 코드는 icon과 title이 뭔지를 정확히 알려주지 않고 (class)를 명시하지 
-않고 적은 알아보기 어려운 코드 아래 니꼴라스 쌤의 코드와 비교해 보도록
-          -->
-        <ul class="find__header-list">
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="fas fa-qrcode fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              QR Code
-            </span>
-          </li>
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="far fa-address-card fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              Add by Contact
-            </span>
-          </li>
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="fas fa-passport fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              Add by ID
-            </span>
-          </li>
-          <li class="find__header-btn header-btn">
-            <span class="header-btn__icon">
-              <i class="far fa-envelope fa-2x"></i>
-            </span>
-            <span class="header-btn__title">
-              Invite
-            </span>
-          </li>
-        </ul>
+        </div>
       </header>
-      <!-- 여기부터 -->
-      <ul class="find__recommended">
-        <h5 class="find__title">Recomended Friends</h5>
-        <!-- 여기까지 좋은데? -->
-        <li class="find__friend frined">
+      <div class="friends__plus">
+        <h5 class="friends__title">Plus Friend</h5>
+        <div class="friends__friend frined ">
+          <div class="frined__column">
+            <img src="images/minjoon.jpg" class="g-avatar friend__avatar" />
+            <div class="friend__content">
+              <span class="friend__name">
+                Plus Friend
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="friends__list">
+        <h5 class="frineds__title">Friends 14</h5>
+        <li class="friends__friend frined friend">
           <div class="friend__column">
             <img src="images/minjoon.jpg" class="g-avatar friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
                 Min joon
               </span>
+              <span class="frined__status">
+                I'm so happy
+              </span>
             </div>
           </div>
           <div class="friend__column">
-            <div class="friends__add-btn">
-              <i class="fas fa-user-plus"></i>
+            <div class="friends__now-listneing">
+              <span>
+                지독하게-FTISLAND (FT Mj)
+              </span>
+              <i class="fas fa-play"></i>
             </div>
           </div>
         </li>
@@ -111,7 +102,7 @@
       <ul class="nav-list">
         <li class="nav__list-item">
           <a href="friends.html" class="nav__list-link">
-            <i class="far fa-user"></i>
+            <i class="fas fa-user"></i>
           </a>
         </li>
         <li class="nav__list-item">
