@@ -10,13 +10,16 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Find | Kakao Clone</title>
   </head>
   <body>
     <div class="status-bar">
       <div class="status-bar__column">
         <span class="status-bar__colck">13:54</span>
-
+      </div>
+      <div class="status-bar__column">
         <i class="fas fa-clock"></i>
         <i class="fas fa-volume-mute"></i>
         <i class="fas fa-wifi"></i>
@@ -90,9 +93,9 @@
       <ul class="find__recommended">
         <h5 class="find__title">Recomended Friends</h5>
         <!-- 여기까지 좋은데? -->
-        <li class="find__friend frined">
+        <li class="find__friend friend">
           <div class="friend__column">
-            <img src="images/minjoon.jpg" class="g-avatar friend__avatar" />
+            <img src="images/minjoon.jpg" class="friend__avatar" />
             <div class="friend__content">
               <span class="friend__name">
                 Min joon
@@ -116,6 +119,7 @@
         </li>
         <li class="nav__list-item">
           <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
             <i class="far fa-comment"></i>
           </a>
         </li>

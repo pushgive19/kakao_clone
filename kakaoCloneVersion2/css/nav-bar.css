@@ -1,0 +1,46 @@
+.nav {
+  background-color: #fcfcfc;
+  position: fixed;
+  width: 100%;
+  padding: 20px 50px;
+  /* 앞숫자가 위아래 뒤가 좌우  4개면 상우좌하*/
+  left: 0px;
+  bottom: 0px;
+  border-top: 1px solid #fafafa;
+  /* height는 padding으로 준거같아. */
+}
+.nav .nav-list {
+  /* margin: 25px 20px; 이거 니콜쌤은 안함 위에서 padding에서 설정함 */
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; 이거 아니야 위에서 padding줬으니까 그걸로 된거야.
+  다르게 말하면 두개는 다른거야. 요소사이의 중간 정렬과 위아래 여백주는것 차이가 있어 */
+}
+
+.nav i {
+  font-size: 25px;
+  /* 나는 이거 위에nav-list에 넣는데 이게 더 좋아보임 */
+}
+/* 
+.nav .nav__list-item {
+  position: relative;
+}  위에 나는 item으로 했잖아 쌤은 link로 설정*/
+
+.nav .nav__list-link {
+  position: relative;
+}
+.nav .nav__badge {
+  position: absolute;
+  color: #faece6;
+  background-color: #e46040;
+  right: -5px;
+  top: -6px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+}

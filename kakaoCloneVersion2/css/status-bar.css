@@ -1,0 +1,20 @@
+.status-bar {
+  display: flex;
+  /* index.html에서 flex적용이 안된이유.
+status-bar 부모가 status-bar__column을 (박스형태로)여러개 가지고 있어야 
+flex적용이되는데 나는 한개 자식 박스만 적어서 정렬될 여분의 박스가 없었어.
+지금은 div 두개로 나누어서 이제 두박스가 space-between적용됨. */
+  justify-content: space-between;
+  margin-bottom: 30px;
+  opacity: 0.7;
+  /* color: #6b6b6b; */
+  font-size: 16px;
+}
+
+.status-bar i {
+  font-size: 15px;
+}
+
+.status-bar .status-bar__battery-level {
+  margin-left: 5px;
+}

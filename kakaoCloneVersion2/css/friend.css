@@ -1,0 +1,61 @@
+.friend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend .friend__avatar {
+  width: 55px;
+  border-radius: 42%;
+}
+
+/* .friends .friend--lg {
+  background-color: red;
+  width: 100px;
+} */
+.friend__avatar.g-avatar {
+  width: 70px;
+}
+
+.friend__avatar.m-avatar {
+  width: 60px;
+}
+
+.friend .friend__column {
+  display: flex;
+  align-items: center;
+  /* margin-left: 5px; 여기 아니야*/
+}
+.friend .friend__avatar {
+  margin-right: 12px;
+  /* display: block; 여기아니야*/
+}
+.friend__content .friend__name {
+  display: block;
+  margin-bottom: 1px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.friend__content .friend__status,
+.friend__content .friend__bottom-text,
+.friend .chat__timestamp {
+  font-size: 13px;
+  opacity: 0.6;
+}
+.friend .friend__now-listening {
+  padding: 4px 10px;
+  border: 2px solid #66cd87;
+  border-radius: 14px;
+  font-size: 12px;
+}
+/* .friends__list .friends__column span {
+  display: flex;
+  align-items: center;
+} */
+
+.friend__now-listening span {
+  opacity: 0.7;
+}
+.fa-play {
+  color: #66cd87;
+}
