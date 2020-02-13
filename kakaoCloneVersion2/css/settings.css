@@ -1,0 +1,12 @@
+.settings .settings__list {
+  /* background-color: green; */
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
+  /* padding: 30px 0px; */
+}
+.settings__list .settings__settings {
+  margin: 30px 0px;
+}
+.settings__settings .settings__title {
+  margin-left: 10px;
+}

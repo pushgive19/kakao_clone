@@ -4,7 +4,8 @@
   align-items: center;
 }
 
-.friend .friend__avatar {
+.friend .friend__avatar,
+.chat__messages .g-avatar {
   width: 55px;
   border-radius: 42%;
 }
@@ -58,4 +59,10 @@
 }
 .fa-play {
   color: #66cd87;
+}
+.friend__add-btn {
+  font-size: 15px;
+  background-color: #f5f5f5;
+  padding: 12px 16px;
+  border-radius: 4px;
 }
