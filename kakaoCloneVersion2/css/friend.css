@@ -4,8 +4,7 @@
   align-items: center;
 }
 
-.friend .friend__avatar,
-.chat__messages .g-avatar {
+.friend .friend__avatar {
   width: 55px;
   border-radius: 42%;
 }

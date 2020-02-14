@@ -6,9 +6,13 @@
 .chats-body .status-bar {
   padding: 0px 20px;
 }
-.chats-body .chat {
+.chats-body .status-bar {
+  padding-top: 10px;
+}
+.chats-body .chat-screen {
   background-image: url("../images/playstation-pattern.png");
   min-height: 100vh;
+  /* max-width: 100vh; */
 }
 .chat__write {
   position: fixed;
@@ -18,9 +22,9 @@
   background-color: #fcfcfc;
   padding: 0px 20px;
 
+  margin: 0 auto;
   left: 0;
   right: 0;
-  margin: 0 auto;
 
   border-radius: 30px;
 
@@ -48,4 +52,86 @@
 }
 .chat__write-column input:focus {
   outline: none;
+}
+.chat__messages .timestamp--style {
+  font-size: 13px;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+
+  margin-bottom: 30px;
+}
+
+.chat-screen .chat__timestamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px;
+  padding-top: 25px;
+}
+.chat__messages .g-avatar {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.chat__messages .message {
+  margin: 0px 20px;
+  display: flex;
+  /* width: 90%; */
+}
+.message .message__content {
+  /* width: 40; */
+  /* height: 50%; */
+  /* align-content: flex-start; */
+  /* 이거 이해 안돼.. incomin, sent 메세지 창이 커졌다 작아졌다 이유를 모르겠어 */
+}
+
+.chat__messages .incoming-message {
+  /* align-self: flex-start; defualt 갑시니까*/
+}
+
+.chat__messages .sent-message {
+  justify-content: flex-end;
+  margin-top: 20px;
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
+  /* background-color: greenyellow; */
+  /* margin-right: -100px; */
+}
+
+.message__content .message__bubble {
+  border-radius: 17px;
+  margin-top: 3px;
+  padding: 7px 10px;
+  font-size: 17px;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  /* display: block; */
+  color: #494949;
+  font-weight: 500;
+}
+.message__content .message__bubble {
+  /* display: block; */
+  /* justify-content: center; */
+}
+
+.message__content .message__author {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sent-message .message__bubble {
+  border-bottom-right-radius: 0px;
+  background-image: linear-gradient(to left, #ee9ca7, #ffdde1);
+}
+
+.incoming-message .message__bubble {
+  border-bottom-left-radius: 0px;
+  background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
 }
