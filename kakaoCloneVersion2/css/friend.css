@@ -33,13 +33,13 @@
 .friend__content .friend__name {
   display: block;
   margin-bottom: 1px;
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0.8;
 }
 .friend__content .friend__status,
 .friend__content .friend__bottom-text,
 .friend .chat__timestamp {
-  font-size: 13px;
+  font-size: 14px;
   opacity: 0.6;
 }
 .friend .friend__now-listening {

@@ -1,7 +1,21 @@
 .chats-body {
+  overflow: hidden;
   /* background-color: green; */
   padding: 0;
 }
+.chats-body .fixed--style {
+  z-index: 2;
+
+  background-color: white;
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+}
+.chat-screen {
+  padding-top: 111px;
+}
+
 .chats-body .header,
 .chats-body .status-bar {
   padding: 0px 20px;
@@ -11,48 +25,77 @@
 }
 .chats-body .chat-screen {
   background-image: url("../images/playstation-pattern.png");
-  min-height: 100vh;
+  min-height: 300vh;
   /* max-width: 100vh; */
 }
-.chat__write {
+.chat__write-container {
   position: fixed;
-  bottom: 50px;
-  width: 80%;
-
-  background-color: #fcfcfc;
-  padding: 0px 20px;
-
+  bottom: 0px;
+  width: 100%;
   margin: 0 auto;
   left: 0;
   right: 0;
-
-  border-radius: 30px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  /* box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025); */
   /* 수평 수직 blur rgba의 마지막 값은 opacity */
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+  75% {
+    box-shadow: 0 13px 27px -61px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+
+  100% {
+    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  }
+}
+.chat__write {
+  margin: 0 auto;
+  /* 이거 중요하네 animation에 maring:0 auto를 주면 안되고 기본 창에다가 */
+  padding: 20px 33px;
+  width: 100%;
+  bottom: 100px;
+  border: none;
+  font-size: 14px;
+  transition: width 0.35s ease-in-out, border-radius 0.35s ease-in-out,
+    transform 0.35s ease-in-out;
+}
+.chat__write:focus {
+  outline: none;
+  border-radius: 30px;
+  width: 80%;
+  /* bottom: 100px; 기준 자체를 옮기는게 아니라 translate으로 위치 이동*/
+  transform: translateY(-100px);
+  animation: float 2s ease-in-out infinite forwards;
+}
+
+.chat__icon {
+  transition: opacity 0.2s ease-in-out;
+}
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
+}
+
+.chat__left-column {
+  left: 10px;
+  position: absolute;
+}
+.chat__right-column {
+  right: 20px;
+  position: absolute;
 }
 .chat__write i {
   font-size: 25px;
 }
 
-.chat__write-column:nth-child(2) {
-  width: 80%;
-  /* color: red; 이거 다시 확인 하자.*/
-}
-.chat__write-column input {
-  padding: 20px 10px;
-  width: 100%;
-  border: none;
-  font-size: 14px;
-}
-.chat__write-column input:focus {
-  outline: none;
-}
 .chat__messages .timestamp--style {
   font-size: 13px;
   font-weight: 600;
@@ -73,22 +116,24 @@
   padding: 0px 20px;
   padding-top: 25px;
 }
-.chat__messages .g-avatar {
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(1turn);
+  }
+}
+.incoming-message img {
   width: 50px;
   border-radius: 50%;
   margin-right: 5px;
+  animation: spin 1s linear infinite;
 }
 
 .chat__messages .message {
   margin: 0px 20px;
   display: flex;
-  /* width: 90%; */
-}
-.message .message__content {
-  /* width: 40; */
-  /* height: 50%; */
-  /* align-content: flex-start; */
-  /* 이거 이해 안돼.. incomin, sent 메세지 창이 커졌다 작아졌다 이유를 모르겠어 */
 }
 
 .chat__messages .incoming-message {
@@ -98,10 +143,6 @@
 .chat__messages .sent-message {
   justify-content: flex-end;
   margin-top: 20px;
-  /* justify-content: flex-end; */
-  /* align-items: flex-end; */
-  /* background-color: greenyellow; */
-  /* margin-right: -100px; */
 }
 
 .message__content .message__bubble {
@@ -110,13 +151,8 @@
   padding: 7px 10px;
   font-size: 17px;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-  /* display: block; */
   color: #494949;
   font-weight: 500;
-}
-.message__content .message__bubble {
-  /* display: block; */
-  /* justify-content: center; */
 }
 
 .message__content .message__author {
@@ -134,4 +170,46 @@
 .incoming-message .message__bubble {
   border-bottom-left-radius: 0px;
   background-image: linear-gradient(to right, #ee9ca7, #ffdde1);
+}
+
+@keyframes incomingAnim {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.incoming-message {
+  animation: incomingAnim 0.5s ease-in-out forwards;
+}
+@keyframes sentAnim {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.sent-message {
+  animation: sentAnim 0.5s ease-in-out forwards;
+}
+
+@keyframes imgRotate {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(2turn);
+  }
+  100% {
+    transform: none;
+  }
+}
+.message .message__avatar {
+  animation: imgRotate 2s ease-in-out infinte forward;
 }

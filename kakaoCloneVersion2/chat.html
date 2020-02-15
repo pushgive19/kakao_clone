@@ -15,37 +15,39 @@
     <title>Chat | Kakao Clone</title>
   </head>
   <body class="chats-body">
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span class="status-bar__colck">13:54</span>
+    <div class="fixed--style">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span class="status-bar__colck">13:54</span>
+        </div>
+        <div class="status-bar__column">
+          <i class="fas fa-clock"></i>
+          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-wifi"></i>
+          <span class="status-bar__battery-level">75%</span>
+          <i class="fas fa-battery-three-quarters"></i>
+        </div>
       </div>
-      <div class="status-bar__column">
-        <i class="fas fa-clock"></i>
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-wifi"></i>
-        <span class="status-bar__battery-level">75%</span>
-        <i class="fas fa-battery-three-quarters"></i>
-      </div>
-    </div>
-    <header class="header">
-      <div class="header__header-column">
-        <a href="index.html" class="header__back-btn">
-          <i class="fas fa-arrow-left"></i>
-        </a>
-        <h1 class="header__title">Grand ma</h1>
-      </div>
-      <div class="header__header-column">
-        <span class="header__icon">
-          <i class="fas fa-search"></i>
-          <!-- <i class="fas fa-bars"></i>
+      <header class="header">
+        <div class="header__header-column">
+          <a href="index.html" class="header__back-btn">
+            <i class="fas fa-arrow-left"></i>
+          </a>
+          <h1 class="header__title">할매</h1>
+        </div>
+        <div class="header__header-column">
+          <span class="header__icon">
+            <i class="fas fa-search"></i>
+            <!-- <i class="fas fa-bars"></i>
         나는 이거 header__icon안에 같이 넣는데 이건 별로인가? -->
-        </span>
-        <!-- 그리고 아래서 div로 넣는데 span으로 해야 하지 않을까? -->
-        <span class="header__icon">
-          <i class="fas fa-bars"></i>
-        </span>
-      </div>
-    </header>
+          </span>
+          <!-- 그리고 아래서 div로 넣는데 span으로 해야 하지 않을까? -->
+          <span class="header__icon">
+            <i class="fas fa-bars"></i>
+          </span>
+        </div>
+      </header>
+    </div>
     <main class="chat-screen">
       <!-- 
     <div class="chat__timestamp">Friday, January 11, 2019</div> 49줄로 적었음 -->
@@ -83,20 +85,19 @@
         </li>
       </ul>
     </main>
-    <div class="chat__write">
-      <div class="chat__write-column">
+    <div class="chat__write-container">
+      <!-- <textarea name="" id="" cols="01" rows="2" class=""></textarea> 
+            textarea는 너무 커 적는 공간이 작을때 input 사용하자-->
+      <input
+        type="text"
+        placeholder="메세지 입력하세요"
+        class="chat__write chat__write-input"
+      />
+
+      <div class="chat__left-column chat__icon">
         <i class="far fa-plus-square"></i>
       </div>
-      <div class="chat__write-column">
-        <!-- <textarea name="" id="" cols="01" rows="2" class=""></textarea> 
-            textarea는 너무 커 적는 공간이 작을때 input 사용하자-->
-        <input
-          type="text"
-          placeholder="메세지 입력하세요"
-          class="chat__write-input"
-        />
-      </div>
-      <div class="chat__write-column">
+      <div class="chat__right-column chat__icon">
         <span class="chat__write-icon">
           <i class="fas fa-smile-wink"></i>
         </span>
@@ -104,6 +105,11 @@
           <i class="fas fa-microphone"></i>
         </span>
       </div>
+    </div>
+    <div class="mobileScreen">
+      <span class="mobileScreen__text"
+        >페이지가 너무 커요 줄여주세요 와라라라라라라랄.</span
+      >
     </div>
   </body>
 </html>
